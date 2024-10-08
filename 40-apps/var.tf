@@ -14,36 +14,30 @@ variable "common_tags" {
     }
 }
 
-variable "sg_tags" {
-    default = {}
-}
-
-variable "mysql_sg_tags" {
+variable "mysql_tags" {
     default = {
         component = "mysql"
     }
 }
 
-variable "backend_sg_tags" {
+variable "backend_tags" {
     default = {
         component = "backend"
     }
 }
 
-variable "frontend_sg_tags" {
+variable "frontend_tags" {
     default = {
         component = "frontend"
     }
 }
 
-variable "sebastian_sg_tags" {
-    default = {
-        component = "sebastian"
-    }
+variable "ansible_tags" {
+  default = {
+    component = "ansible"
+  }
 }
 
-variable "ansible_sg_tags" {
-    default = {
-        component = "ansible"
-    }
+variable "zone_name" {
+    default = "expensemind.online"
 }

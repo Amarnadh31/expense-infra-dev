@@ -6,6 +6,7 @@ module "ec2_instance" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [data.aws_ssm_parameter.sebastian_sg_id.value]
   subnet_id              = local.public_subnet_id
+  ami = data.aws_ami.sebastian_ami.id
 
   tags = merge (
     var.common_tags,
